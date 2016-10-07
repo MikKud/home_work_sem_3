@@ -37,22 +37,28 @@ void operations::devider()
 					}
 					for (int j = temp1.size() - 1; j >= 0; --j)
 						temp2.push_back(temp1[j]);
-					parts.push_back(temp1);
+					parts.push_back(temp2);
 					st_char.pop();
 				}
+			TODO:"здесь доделать разделение вектора с определенным кол-вом слагаемых на подвектора";
 				vector<string> parcer;
-				
 				typedef vector< string > split_vector_type;
 				split_vector_type SplitVec; // #2: Search for tokens
 				for (int i = 0; i < parts[counter].size(); i++)
 				{
-					
 					split(SplitVec, parts[counter], is_any_of(operators), token_compress_on);
 				}
-				cout << "spliter" << endl;
-				for (auto i : SplitVec)
+				if (SplitVec.size() > 2)
 				{
-					cout<<i<<endl;
+					int helper = SplitVec.size();
+					int number = 0;
+					for (int i = 0; i < parts[counter].size(); i++)
+					{
+					TODO: "записать вектор в очередь FIFO после чего как со стеком, доходя до второго плюса контролируя их колл-во";
+						TODO: "(или рассмотреть вариант с дохождением до второго плюса или конца строки)";
+						TODO: "затираем инфу и ставим индекс, продорлжаем пока стэк не пуст или тип тогог, тут тоже надо подумать";
+					}
+
 				}
 				
 				char b[16]; // <-- сюда записываем результат
